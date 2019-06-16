@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>API文档</title>
+  <script src="./jquery-3.4.1.min.js"></script>
+  <script src="./api.js"></script>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <!-- head -->
+  <header>
+    <h3 class="title"></h3>
+  </header>
+
+  <!-- main -->
+  <main class="main row-between">
+    <!-- left -->
+    <div class="left-nav p20 bg-gary">
+      <ul class="left-ul">
+      </ul>
+    </div>
+
+    <!-- right-box -->
+    <div class="right-box pb30">
+      <div class="request-item">
+      </div>
+    </div>
+
+    <div class="backTop p40">
+      <img src="./images/back-top.png" title="返回顶部">
+    </div>
+  </main>
+
+
+  <!--  -->
+  <script>
+    $(function(){
+      // 页面数据
+      const data = api;
+      const $LeftUl = $('.left-ul');
+      const $requestItem = $('.request-item');
+      
+      // 大标题展示
+      $('.title').html(data.info.name);
+
+      // 侧边导航渲染
+      $.each(data.item, (keyFirst, value) => {
+        // 一级导航
+        const $FirstLi = $(`
+        <li class="nav-item color-primary">
+          <a class="top row align-center color-primary pv5" href='${'#' + keyFirst}'>
+            <img class="pull" src="./images/pull.png">
+            <div class="nav-title">${value.name}</div>
+          </a>
+        </li>
+        `);
+        $LeftUl.append($FirstLi);
+        
+        // 二级目录
+        $.each(value.item, (keySecond, value) => {
+          const $SecondUl = $(`
+          <ul class="nav-content hidden">
+            <a class="nav-content_item row " href='${'#' + keyFirst + '-' + keySecond}'>
+              <p class="way">${value.request.method}</p>
+              <p class="nav-content_item-name color-primary pl10">${value.name}</p>
+            </a>
+          </ul>
+          `);
+          $FirstLi.append($SecondUl);
+          changeColor(keyFirst, keySecond, value.request.method);
+        });
+      });
+
+      // 右侧内容
+      // 右侧小标题展示
+      $.each(data.item, (keyRight, valueRight) => {
+        const $requestItem = $('.request-item');
+        const requestItemTitle = $(`
+        <h2 class="request-item_title bd-b pt20 pb30" id='${keyRight}'>${valueRight.name}</h2>
+        `);
+        $requestItem.append(requestItemTitle);
+
+        // url/header/body
+        $.each(valueRight.item, (key, value) => {
+          const requestMethod = $(`
+          <div class="request-name pt20 pb10" id='${keyRight + '-' + key}'>
+            <span class="request-way">${value.request.method}</span>
+            <span class="weight6" >${value.name}</span>
+          </div>
+          <div class="request-url bg-gary p10 r3 text-nm">
+            ${value.request.url.raw}
+          </div>
+          `);
+          $requestItem.append(requestMethod);
+
+          const Headers = $(`
+          <div class="request-headers_title pt30 pb10">Headers</div>
+          `);
+          $requestItem.append(Headers);
+
+          // header
+          $.each(value.request.header, (keyHead, valueHead) => {
+            const header = $(`
+            <div class="request-headers-content bg-gary ph10 text-nm r3">
+              <div class="request-headers_item row pv10 bd-b">
+                <p class="request-headers_item-left">${valueHead.key}</p>
+                <p class="request-headers_item-right pl10">${valueHead.value}</p>
+              </div>
+            </div>
+            `);
+            $requestItem.append(header);
+          });
+
+          // body
+          const Body = $(`
+          <div class="request-body_title pt30 pb10">Body</div>
+          `);
+          $requestItem.append(Body);
+
+          $.each(value, (keyBody, valueBody) => {
+            if (valueBody.body) {
+              const body = $(`
+              <div class="request-body_content bg-gary p10 text-nm r3">
+                ${valueBody.body.raw}
+              </div>
+              `);
+              $requestItem.append(body);
+            }
+          });
+
+          // params
+          const Params = $(`
+          <div class="request-params_title pt30 pb10">Params</div>
+          `);
+          $requestItem.append(Params);
+
+          $.each(value.request.url.query, (keyQuery, valueQuery) => {
+            const params = $(`
+            <div class="request-params-content bg-gary ph10 text-nm r3">
+              <div class="request-params_item row pv10 bd-b">
+                <p class="request-params_item-left">${valueQuery.key}</p>
+                <p class="request-params_item-right pl10">${valueQuery.value}</p>
+                <p class="request-params_item-right pl10 color-put">${valueQuery.description || ''}</p>
+              </div>
+            </div>
+            `);
+            $requestItem.append(params);
+          });
+
+          // response
+          const Response = $(`
+          <div class="response-title pt30 pb10">Response</div>
+          `);
+          $requestItem.append(Response);
+
+          $.each(value.response, (keyResponse, valueResponse) => {
+            const response = $(`
+            <div class="response-content color-response bg-dark p10 mb10 text-nm r3">
+              ${valueResponse.body}
+            </div>
+            `);
+            $requestItem.append(response);
+          });
+        });
+      });
+
+      // 导航下拉和收起事件
+      // TODO: 待优化
+      const $Top = $LeftUl.find('.top');
+      const $navItem = $LeftUl.find('.nav-content_item');
+      $Top.click(function(){
+        const $This = $(this);
+        const $NavContent = $This.siblings('.nav-content');
+        if ($NavContent.hasClass('hidden')) {
+          $NavContent.removeClass('hidden');
+          $This
+            .find('.pull')
+            .attr('src', './images/down.png')
+            .end()
+            .find('.nav-title')
+            .addClass('color-post text-nm');
+          return;
+        }
+        $NavContent.addClass('hidden');
+        $This
+            .find('.pull')
+            .attr('src', './images/pull.png')
+            .end()
+            .find('.nav-title')
+            .removeClass('color-post text-nm');
+      });
+      
+      // 根据请求方法改变颜色
+      function changeColor(keyFirst, keySecond, method){
+        switch (method) {
+          case 'GET':
+            $('.nav-item')
+              .eq(keyFirst)
+              .find('.nav-content_item')
+              .eq(keySecond)
+              .find('.way')
+              .addClass('color-get');
+            break;
+          case 'POST':
+            $('.nav-item')
+              .eq(keyFirst)
+              .find('.nav-content_item')
+              .eq(keySecond)
+              .find('.way')
+              .addClass('color-post');
+            break;
+          case 'DELETE':
+            $('.nav-item')
+              .eq(keyFirst)
+              .find('.nav-content_item')
+              .eq(keySecond)
+              .find('.way')
+              .addClass('color-delete');
+              break;
+          default:
+            $('.nav-item')
+              .eq(keyFirst)
+              .find('.nav-content_item')
+              .eq(keySecond)
+              .find('.way')
+              .addClass('color-put');
+        }
+      };
+    });
+
+    // 返回顶部
+    $('.backTop').click(() => {
+      $('html, body, .right-box').animate({ scrollTop: 0 }, 200);
+    });
+  </script>
+</body>
+</html>
