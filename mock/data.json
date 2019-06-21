@@ -1,0 +1,4108 @@
+cb({
+	"info": {
+		"_postman_id": "8080208d-3c45-47f2-be6d-21121cbb263e",
+		"name": "CMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "登录 /cms/auth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"zhengjingxueshe\",\n\t\"password\": \"zhengjingxueshe@1234\"\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/auth",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "登录 /auth",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"zhengjingxueshe\",\n\t\"password\": \"zhengjingxueshe@1234\"\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/auth",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\":0,\n\t\"data\":{\n\t\t\"session\": \"session\"\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "退出 /auth",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{mock}}/auth",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "退出 /auth",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/auth",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": ""
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": ""
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": ""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 Jun 2019 01:30:52 GMT"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ab-ICwsK8QSHRzyrruyR67JyQ\""
+								},
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=297a81fd97d2e5a4"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=dce695118557cbb4"
+								},
+								{
+									"key": "Content-Length",
+									"value": "154"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "平台概况",
+			"item": [
+				{
+					"name": "平台概况 /statistics",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/statistics",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"statistics"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "平台概况 /statistics",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"type": "text",
+										"value": "p19008:cms:ajkjinjzkjgkjjag"
+									},
+									{
+										"key": "X-Client-Token",
+										"type": "text",
+										"value": "p19008:cms"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/statistics",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"statistics"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"yesterdayUser\": \"昨日新增用户\",\n        \"totalUser\": \"总用户\",\n        \"todayConsume\": \"今日消费\",\n        \"totalConsume\": \"总消费\",\n        \"region\": [\n            {\n                \"key\": \"北京\",\n                \"value\": 10\n            },\n            {\n                \"key\": \"上海\",\n                \"value\": 20\n            },\n            {\n                \"key\": \"广东\",\n                \"value\": 30\n            },\n            {\n                \"key\": \"南京\",\n                \"value\": 40\n            },\n            {\n                \"key\": \"杭州\",\n                \"value\": 40\n            },\n            {\n                \"key\": \"武汉\",\n                \"value\": 40\n            },\n            {\n                \"key\": \"成都\",\n                \"value\": 40\n            },\n            {\n                \"key\": \"长沙\",\n                \"value\": 40\n            },\n            {\n                \"key\": \"郑州\",\n                \"value\": 40\n            },\n            {\n                \"key\": \"天津\",\n                \"value\": 40\n            },\n            {\n                \"key\": \"香港\",\n                \"value\": 40\n            },\n            {\n                \"key\": \"澳门\",\n                \"value\": 40\n            },\n            {\n                \"key\": \"台北\",\n                \"value\": 40\n            },\n            {\n                \"key\": \"济南\",\n                \"value\": 40\n            },\n            {\n                \"key\": \"青岛\",\n                \"value\": 40\n            },\n            {\n                \"key\": \"其他\",\n                \"value\": 40\n            }\n        ],\n        \"age\": [\n            {\n                \"key\": \"18~25\",\n                \"value\": 15\n            },\n            {\n                \"key\": \"26~35\",\n                \"value\": 15\n            },\n            {\n                \"key\": \"36~45\",\n                \"value\": 15\n            },\n            {\n                \"key\": \"46~60\",\n                \"value\": 15\n            },\n            {\n                \"key\": \"其他\",\n                \"value\": 15\n            }\n        ],\n        \"gender\": [\n            {\n                \"key\": \"男\",\n                \"value\": 12\n            },\n            {\n                \"key\": \"女\",\n                \"value\": 12\n            },\n            {\n                \"key\": \"未知\",\n                \"value\": 12\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "用户管理",
+			"item": [
+				{
+					"name": "用户列表 /user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/user?phone=13506828279&vipId=1&_page=1&_count=12",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "13506828279"
+								},
+								{
+									"key": "vipId",
+									"value": "1",
+									"description": "-1非会员"
+								},
+								{
+									"key": "_page",
+									"value": "1"
+								},
+								{
+									"key": "_count",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "用户列表 /user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/user?phone=13506828279&vipId=1&_page=1&_count=12",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"user"
+									],
+									"query": [
+										{
+											"key": "phone",
+											"value": "13506828279"
+										},
+										{
+											"key": "vipId",
+											"value": "1"
+										},
+										{
+											"key": "_page",
+											"value": "1"
+										},
+										{
+											"key": "_count",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"data\": {\n\t\t\"total\": 123,\n\t\t\"list\": [\n\t\t\t{\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"avatar\": \"https://img5.duitang.com/uploads/item/201601/14/20160114202847_QEavB.thumb.700_0.png\",\n\t\t\t\t\"nickname\": \"昵称\",\n\t\t\t\t\"phone\": \"13506828278\",\n\t\t\t\t\"platform\": \"WECHAT\",\n\t\t\t\t\"vip\": [\"黄金\", \"铂金\"]\n\t\t\t},{\n\t\t\t\t\"id\": 2,\n\t\t\t\t\"avatar\": \"https://img5.duitang.com/uploads/item/201601/14/20160114202847_QEavB.thumb.700_0.png\",\n\t\t\t\t\"nickname\": \"昵称\",\n\t\t\t\t\"phone\": \"13506828278\",\n\t\t\t\t\"platform\": \"QQ\",\n\t\t\t\t\"vip\": [\"黄金\", \"铂金\"]\n\t\t\t},{\n\t\t\t\t\"id\": 3,\n\t\t\t\t\"avatar\": \"https://img5.duitang.com/uploads/item/201601/14/20160114202847_QEavB.thumb.700_0.png\",\n\t\t\t\t\"nickname\": \"昵称\",\n\t\t\t\t\"phone\": \"13506828278\",\n\t\t\t\t\"platform\": \"QQ\",\n\t\t\t\t\"vip\": []\n\t\t\t},{\n\t\t\t\t\"id\": 4,\n\t\t\t\t\"avatar\": \"https://img5.duitang.com/uploads/item/201601/14/20160114202847_QEavB.thumb.700_0.png\",\n\t\t\t\t\"nickname\": \"昵称\",\n\t\t\t\t\"phone\": \"13506828278\",\n\t\t\t\t\"platform\": \"QQ\"\n\t\t\t}\n\t\t]\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "用户详情 /user/1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/user/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "用户详情 /user/1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/user/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"data\": {\n\t\t\"avatar\": \"https://img5.duitang.com/uploads/item/201601/14/20160114202847_QEavB.thumb.700_0.png\",\n\t\t\"phone\": 13506828279,\n\t\t\"nickname\": \"昵称\",\n\t\t\"vip\": [\"黄金\", \"铂金\"],\n\t\t\"days\": 199,\n\t\t\"integral\": \"可用积分\"\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "课程列表 /user/1/subject",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/user/1/subject",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"user",
+								"1",
+								"subject"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "课程列表 /user/1/subject",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/user/1/subject",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"user",
+										"1",
+										"subject"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"data\": {\n\t\t\"total\": 123,\n\t\t\"list\": [\n\t\t\t{\n\t\t\t\t\"id\": 123,\n\t\t\t\t\"name\": \"课程1\",\n\t\t\t\t\"time\": 13333333333333,\n\t\t\t\t\"content\": \"备注\"\n\t\t\t}\n\t\t]\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "添加课程 /user/1/subject",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"课程id\",\n\t\"content\": \"备注\"\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/user/1/subject",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"user",
+								"1",
+								"subject"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "添加课程 /user/1/subject",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\": \"课程id\",\n\t\"content\": \"备注\"\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/user/1/subject",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"user",
+										"1",
+										"subject"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "课程删除 /user/subject/1",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/user/1/subject/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"user",
+								"1",
+								"subject",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "课程删除 /user/subject/1",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/user/subject/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"user",
+										"subject",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "\bvip",
+			"item": [
+				{
+					"name": "会员列表 /vip",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"type": "text",
+								"value": "p19008:cms:ajkjinjzkjgkjjag"
+							},
+							{
+								"key": "X-Client-Token",
+								"type": "text",
+								"value": "p19008:cms"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/vip",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"vip"
+							],
+							"query": [
+								{
+									"key": "不分页",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "会员列表 /vip",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/vip",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"vip"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"data\": [\n\t\t{\n\t\t\t\"id\": 1,\n\t\t\t\"name\": \"铂金\",\n\t\t\t\"price\": 1231,\n\t\t\t\"validity\": \"ONEWEEK\",\n\t\t\t\"buys\":\"购买人数\",\n\t\t\t\"isOnSale\":1\n\t\t},{\n\t\t\t\"id\": 2,\n\t\t\t\"name\": \"铂金2\",\n\t\t\t\"price\": 1231,\n\t\t\t\"validity\": \"ONEMONTH\",\n\t\t\t\"buys\":\"购买人数\",\n\t\t\t\"isOnSale\":1\n\t\t},\n\t\t{\n\t\t\t\"id\": 3,\n\t\t\t\"name\": \"铂金3\",\n\t\t\t\"price\": 1231,\n\t\t\t\"validity\": \"THREEMONTH\",\n\t\t\t\"buys\":\"购买人数\",\n\t\t\t\"isOnSale\":0\n\t\t},{\n\t\t\t\"id\": 4,\n\t\t\t\"name\": \"铂金4\",\n\t\t\t\"price\": 1231,\n\t\t\t\"validity\": \"SIXMONTH\",\n\t\t\t\"buys\":\"购买人数\",\n\t\t\t\"isOnSale\":1\n\t\t},{\n\t\t\t\"id\": 5,\n\t\t\t\"name\": \"铂金5\",\n\t\t\t\"price\": 1231,\n\t\t\t\"validity\": \"ONEYEAR\",\n\t\t\t\"buys\":\"购买人数\",\n\t\t\t\"isOnSale\":1\n\t\t},{\n\t\t\t\"id\": 6,\n\t\t\t\"name\": \"铂金6\",\n\t\t\t\"price\": 1231,\n\t\t\t\"validity\": \"ONEYEAR\",\n\t\t\t\"buys\":\"购买人数\",\n\t\t\t\"isOnSale\":1\n\t\t},{\n\t\t\t\"id\": 7,\n\t\t\t\"name\": \"铂金7\",\n\t\t\t\"price\": 1231,\n\t\t\t\"validity\": \"ONEYEAR\",\n\t\t\t\"buys\":\"购买人数\",\n\t\t\t\"isOnSale\":1\n\t\t},{\n\t\t\t\"id\": 8,\n\t\t\t\"name\": \"铂金8\",\n\t\t\t\"price\": 1231,\n\t\t\t\"validity\": \"ONEYEAR\",\n\t\t\t\"buys\":\"购买人数\",\n\t\t\t\"isOnSale\":1\n\t\t},{\n\t\t\t\"id\": 9,\n\t\t\t\"name\": \"铂金9\",\n\t\t\t\"price\": 1231,\n\t\t\t\"validity\": \"ONEYEAR\",\n\t\t\t\"buys\":\"购买人数\",\n\t\t\t\"isOnSale\":1\n\t\t},{\n\t\t\t\"id\": 10,\n\t\t\t\"name\": \"铂金10\",\n\t\t\t\"price\": 1231,\n\t\t\t\"validity\": \"ONEYEAR\",\n\t\t\t\"buys\":\"购买人数\",\n\t\t\t\"isOnSale\":1\n\t\t},{\n\t\t\t\"id\": 11,\n\t\t\t\"name\": \"铂金11\",\n\t\t\t\"price\": 1231,\n\t\t\t\"validity\": \"ONEYEAR\",\n\t\t\t\"buys\":\"购买人数\",\n\t\t\t\"isOnSale\":1\n\t\t},{\n\t\t\t\"id\": 12,\n\t\t\t\"name\": \"铂金12\",\n\t\t\t\"price\": 1231,\n\t\t\t\"validity\": \"ONEYEAR\",\n\t\t\t\"buys\":\"购买人数\",\n\t\t\t\"isOnSale\":1\n\t\t},{\n\t\t\t\"id\": 13,\n\t\t\t\"name\": \"铂金13\",\n\t\t\t\"price\": 1231,\n\t\t\t\"validity\": \"ONEYEAR\",\n\t\t\t\"buys\":\"购买人数\",\n\t\t\t\"isOnSale\":1\n\t\t}\n\t]\n}"
+						}
+					]
+				},
+				{
+					"name": "\b上下架 /vip/1/isOnSale",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{mock}}/vip/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"vip",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "详情 /vip/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{mock}}/vip/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"vip",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "详情 /vip/1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{mock}}/vip/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"vip",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\":0,\n\t\"data\": {\n\t\t\t\"name\": \"铂金\",\n\t\t\t\"price\": 1231,\n\t\t\t\"validity\": \"'ONEWEEK','ONEMONTH','THREEMONTH','SIXMONTH','ONEYEAR'\",\n\t\t\t\"buys\":\"购买人数\",\n\t\t\t\"originalPrice\": 12.1,\n\t\t\t\"intro\":\"会员简介\",\n\t\t\t\"type\": \"FREE\",\n\t\t\t\"discount\":1.1,\n\t\t\t\"freeType\": \"ALL-全部，PART-部分\",\n\t\t\t\"subject\": [\n\t\t\t\t{\n\t\t\t\t\t\"id\":1,\n\t\t\t\t\t\"cover\":\"http\",\n\t\t\t\t\t\"name\":\"商品名称\",\n\t\t\t\t\t\"price\":12.11,\n\t\t\t\t\t\"category\":\"分类\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"id\":881,\n\t\t\t\t\t\"cover\":\"http\",\n\t\t\t\t\t\"name\":\"商品名称\",\n\t\t\t\t\t\"price\":12.11,\n\t\t\t\t\t\"category\":\"分类\"\n\t\t\t\t},{\n\t\t\t\t\t\"id\":9,\n\t\t\t\t\t\"cover\":\"http\",\n\t\t\t\t\t\"name\":\"商品名称\",\n\t\t\t\t\t\"price\":12.11,\n\t\t\t\t\t\"category\":\"分类\"\n\t\t\t\t},{\n\t\t\t\t\t\"id\":8,\n\t\t\t\t\t\"cover\":\"http\",\n\t\t\t\t\t\"name\":\"商品名称\",\n\t\t\t\t\t\"price\":12.11,\n\t\t\t\t\t\"category\":\"分类\"\n\t\t\t\t},{\n\t\t\t\t\t\"id\":7,\n\t\t\t\t\t\"cover\":\"http\",\n\t\t\t\t\t\"name\":\"商品名称\",\n\t\t\t\t\t\"price\":12.11,\n\t\t\t\t\t\"category\":\"分类\"\n\t\t\t\t},{\n\t\t\t\t\t\"id\":6,\n\t\t\t\t\t\"cover\":\"http\",\n\t\t\t\t\t\"name\":\"商品名称\",\n\t\t\t\t\t\"price\":12.11,\n\t\t\t\t\t\"category\":\"分类\"\n\t\t\t\t},{\n\t\t\t\t\t\"id\":5,\n\t\t\t\t\t\"cover\":\"http\",\n\t\t\t\t\t\"name\":\"商品名称\",\n\t\t\t\t\t\"price\":12.11,\n\t\t\t\t\t\"category\":\"分类\"\n\t\t\t\t},{\n\t\t\t\t\t\"id\":4,\n\t\t\t\t\t\"cover\":\"http\",\n\t\t\t\t\t\"name\":\"商品名称\",\n\t\t\t\t\t\"price\":12.11,\n\t\t\t\t\t\"category\":\"分类\"\n\t\t\t\t},{\n\t\t\t\t\t\"id\":3,\n\t\t\t\t\t\"cover\":\"http\",\n\t\t\t\t\t\"name\":\"商品名称\",\n\t\t\t\t\t\"price\":12.11,\n\t\t\t\t\t\"category\":\"分类\"\n\t\t\t\t},{\n\t\t\t\t\t\"id\":12,\n\t\t\t\t\t\"cover\":\"http\",\n\t\t\t\t\t\"name\":\"商品名称\",\n\t\t\t\t\t\"price\":12.11,\n\t\t\t\t\t\"category\":\"分类\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"content\":\"权益说明\",\n\t\t\t\"isOnSale\": 1\n\t\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "添加 /vip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{mock}}/vip",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"vip"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "添加 /vip",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{mock}}/vip",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"vip"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"name\": \"铂金\",\n\t\"price\": 1231,\n\t\"validity\": \"'ONEWEEK','ONEMONTH','THREEMONTH','SIXMONTH','ONEYEAR'\",\n\t\"buys\":\"购买人数\",\n\t\"originalPrice\": 12.1,\n\t\"intro\":\"会员简介\",\n\t\"type\": \"DISCOUNT-折扣，FREE-免费权益\",\n\t\"discount\":1.1,\n\t\"freeType\": \"ALL-全部，PART-部分\",\n\t\"subject\": [\n\t\t{\n\t\t\t\"id\":1,\n\t\t\t\"cover\":\"http\",\n\t\t\t\"name\":\"商品名称\",\n\t\t\t\"price\":12.11,\n\t\t\t\"category\":\"分类\"\n\t\t}\n\t],\n\t\"content\":\"权益说明\",\n\t\"isOnSale\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "修改 /vip/1",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"铂金\",\n\t\"price\": 1231,\n\t\"validity\": \"'ONEWEEK','ONEMONTH','THREEMONTH','SIXMONTH','ONEYEAR'\",\n\t\"buys\":\"购买人数\",\n\t\"originalPrice\": 12.1,\n\t\"intro\":\"会员简介\",\n\t\"type\": \"DISCOUNT-折扣，FREE-免费权益\",\n\t\"discount\":1.1,\n\t\"freeType\": \"ALL-全部，PART-部分\",\n\t\"subjectId\": [1,2],\n\t\"content\":\"权益说明\"\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/vip/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"vip",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "录播图管理",
+			"item": [
+				{
+					"name": "轮播图列表 /banner",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/banner",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"banner"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "轮播图列表 /banner",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/banner",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"banner"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"data\": [\n\t\t{\n\t\t\t\"id\": 1,\n\t\t\t\"cover\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n\t\t\t\"type\": \"SUBJECT\",\n\t\t\t\"ref\": {\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"name\": \"课程名1课程名1课程名1课程名1课程名1课程名1课程名1课程名1\"\n\t\t\t}\n\t\t},{\n\t\t\t\"id\": 2,\n\t\t\t\"cover\": \"https://t1.hddhhn.com/uploads/tu/201810/584/82fc0b7d43.jpg\",\n\t\t\t\"type\": \"NEWS\",\n\t\t\t\"ref\": {\n\t\t\t\t\"id\": 2,\n\t\t\t\t\"name\": \"课程名2\"\n\t\t\t}\n\t\t},{\n\t\t\t\"id\": 3,\n\t\t\t\"cover\": \"https://t1.hddhhn.com/uploads/tu/201811/1/30d5cdb90f.jpg\",\n\t\t\t\"type\": \"NONE\",\n\t\t\t\"ref\": {\n\t\t\t\t\"id\": 3,\n\t\t\t\t\"name\": \"课程名3\"\n\t\t\t}\n\t\t}\n\t]\n}"
+						}
+					]
+				},
+				{
+					"name": "新增录播图 /banner",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cover\": \"url\",\n\t\"type\": \"SUBJECT\",\n\t\"refId\": 123123\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/banner",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"banner"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "新增录播图 /banner",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"cover\": \"url\",\n\t\"type\": \"SUBJECT\",\n\t\"refId\": 123123\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/banner",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"banner"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "\b编辑录播图 /banner/1",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cover\": \"url\",\n\t\"type\": \"SUBJECT/ARTICLE/NONE\",\n\t\"refId\": 123123\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/banner/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"banner",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "新增录播图 /banner",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"cover\": \"url\",\n\t\"type\": \"SUBJECT/NEWS/NONE\",\n\t\"refId\": 123123\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/banner/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"banner",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "删除轮播图 /banner/1",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/banner/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"banner",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "删除轮播图 /banner/1",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/banner/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"banner",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "subject",
+			"item": [
+				{
+					"name": "课程分类 category",
+					"item": [
+						{
+							"name": "测试",
+							"item": [
+								{
+									"name": "列表 /category",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{mock}}/category",
+											"host": [
+												"{{mock}}"
+											],
+											"path": [
+												"category"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "课程分类 /category",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{mock}}/category",
+													"host": [
+														"{{mock}}"
+													],
+													"path": [
+														"category"
+													],
+													"query": [
+														{
+															"key": "",
+															"value": "",
+															"disabled": true
+														},
+														{
+															"key": "",
+															"value": "",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": "json",
+											"header": null,
+											"cookie": [],
+											"body": "{\n\t\"status\":0,\n\t\"data\": [\n\t\t{\n\t\t\t\"id\":1,\n\t\t\t\"name\":\"分类1\",\n\t\t\t\"subjectCount\": 12\n\t\t},\n\t\t{\n\t\t\t\"id\":2,\n\t\t\t\"name\":\"分类2\",\n\t\t\t\"subjectCount\": 12\n\t\t}\n\t\t]\n}"
+										}
+									]
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "列表 /category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{mock}}/category",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"category"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "课程分类 /category",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{mock}}/category",
+											"host": [
+												"{{mock}}"
+											],
+											"path": [
+												"category"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n\t\"status\":0,\n\t\"data\": [\n\t\t{\n\t\t\t\"id\":1,\n\t\t\t\"name\":\"分类1\",\n\t\t\t\"subjectCount\": 12\n\t\t},\n\t\t{\n\t\t\t\"id\":2,\n\t\t\t\"name\":\"分类2\",\n\t\t\t\"subjectCount\": 12\n\t\t}\n\t\t]\n}"
+								}
+							]
+						},
+						{
+							"name": "修改 /category/1/sort",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"sort\":\"1-上移，-1-下移\"\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/category/1/sort",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"category",
+										"1",
+										"sort"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "修改 /category/1/sort",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"sort\":\"1-上移，-1-下移\"\n}"
+										},
+										"url": {
+											"raw": "{{mock}}/category/1/sort",
+											"host": [
+												"{{mock}}"
+											],
+											"path": [
+												"category",
+												"1",
+												"sort"
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n\t\"status\":0\n}"
+								}
+							]
+						},
+						{
+							"name": "添加 /category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\":\"name\"\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/category",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"category"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "添加 /category",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"name\":\"name\"\n}"
+										},
+										"url": {
+											"raw": "{{mock}}/category",
+											"host": [
+												"{{mock}}"
+											],
+											"path": [
+												"category"
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n\t\"status\":0,\n\t\"data\": {\n\t\t\"id\":1,\n\t\t\"name\": \"名称\"\n\t}\n}"
+								}
+							]
+						},
+						{
+							"name": "修改 /category/1",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\":\"name\"\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/category/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"category",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "修改 /category/1",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"name\":\"name\"\n}"
+										},
+										"url": {
+											"raw": "{{mock}}/category/1",
+											"host": [
+												"{{mock}}"
+											],
+											"path": [
+												"category",
+												"1"
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n\t\"status\":0,\n\t\"data\": {\n\t\t\"id\":1,\n\t\t\"name\": \"名称\"\n\t}\n}"
+								}
+							]
+						},
+						{
+							"name": "删除 /category/1",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{mock}}/category/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"category",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "删除 /category/1",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{mock}}/category/1",
+											"host": [
+												"{{mock}}"
+											],
+											"path": [
+												"category",
+												"1"
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n\t\"status\":0\n}"
+								}
+							]
+						},
+						{
+							"name": "移除分类下课程 /category/subject/1",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{mock}}/category/subject/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"category",
+										"subject",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "移除分类下课程 /category/subject/1",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{mock}}/category/subject/1",
+											"host": [
+												"{{mock}}"
+											],
+											"path": [
+												"category",
+												"subject",
+												"1"
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n\t\"status\":0\n}"
+								}
+							]
+						},
+						{
+							"name": "分类详情 /category/1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{mock}}/category/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"category",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "分类详情 /category/1",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{mock}}/category/1",
+											"host": [
+												"{{mock}}"
+											],
+											"path": [
+												"category",
+												"1"
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n\t\"status\":0,\n\t\"data\": {\n      \"subjectCount\":18,\n      \"name\":\"名称\",\n      \"subject\":[\n        {\n          \"id\": 1,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": {\n          \t\"id\": 1,\n          \t\"name\": \"fenlei\"\n          },\n          \"isOnSale\":1\n        },\n         {\n          \"id\": 2,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":1\n        }, {\n          \"id\": 4,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":1\n        }, {\n          \"id\": 31,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":1\n        }, {\n          \"id\": 41,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":1\n        }, {\n          \"id\": 5,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":1\n        }, {\n          \"id\": 6,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":0\n        }, {\n          \"id\": 7,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":1\n        }, {\n          \"id\": 8,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":0\n        }, {\n          \"id\": 11,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":1\n        }, {\n          \"id\": 9,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":1\n        }, {\n          \"id\": 21,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":0\n        }, {\n          \"id\": 13,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":1\n        }, {\n          \"id\": 14,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":1\n        }, {\n          \"id\": 15,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":1\n        }, {\n          \"id\": 53,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":1\n        }, {\n          \"id\": 17,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":1\n        }, {\n          \"id\": 18,\n          \"cover\": \"http\",\n          \"name\": \"课程1\",\n          \"price\": 112222,\n          \"category\": \"类别\",\n          \"isOnSale\":1\n        }\n      ]\n    }\n}"
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "课程列表 /subject",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/subject",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"subject"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "课程列表 /subject",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/subject?",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"subject"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "12312",
+											"disabled": true
+										},
+										{
+											"key": "scene",
+											"value": "REF_CAROUSEL",
+											"disabled": true
+										},
+										{
+											"key": "isOnSale",
+											"value": "1",
+											"description": "1:已上架 0:未上架",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"data\": [\n\t\t{\n\t\t\t\"id\": 1,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程1\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},\n\t\t{\n\t\t\t\"id\": 2,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 53,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 33212,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 31112,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 222,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 3222,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 32,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 3112,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 392,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 3992,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 832,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 372,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 362,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 352,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 324,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 332,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 322,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t},{\n\t\t\t\"id\": 312,\n\t\t\t\"cover\": \"http\",\n\t\t\t\"name\": \"课程2\",\n\t\t\t\"price\": 112222,\n\t\t\t\"category\": \"类别\"\n\t\t}\n\t]\n}"
+						},
+						{
+							"name": "课程列表分页 /subject",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock}}/subject?isOnSale=1&filter=12312&categoryId=1&isRecommend=1&_page=1&_count=10",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"subject"
+									],
+									"query": [
+										{
+											"key": "isOnSale",
+											"value": "1"
+										},
+										{
+											"key": "filter",
+											"value": "12312"
+										},
+										{
+											"key": "categoryId",
+											"value": "1"
+										},
+										{
+											"key": "isRecommend",
+											"value": "1"
+										},
+										{
+											"key": "_page",
+											"value": "1"
+										},
+										{
+											"key": "_count",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\":0,\n\t\"data\": {\n\t\t\"total\":11,\n\t\t\"list\": [\n\t\t\t{\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"cover\":\"http://k.zol-img.com.cn/sjbbs/7692/a7691515_s.jpg\",\n\t\t\t\t\"isOnSale\":1,\n\t\t\t\t\"name\": \"课程1\",\n\t\t\t\t\"price\": 112222,\n\t\t\t\t\"category\": \"类别\"\n\t\t\t}\n\t\t\t]\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": " 上下架 /subject/1/isOnSale",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"categoryId\": 1\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/subject/1/isOnSale",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"subject",
+								"1",
+								"isOnSale"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": " 上下架 /subject/1/isOnSale",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{mock}}/subject/1/isOnSale",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"subject",
+										"1",
+										"isOnSale"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\":0\n}"
+						}
+					]
+				},
+				{
+					"name": "是否推荐 /subject/1/isRecommend",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{mock}}/subject/1/isRecommend",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"subject",
+								"1",
+								"isRecommend"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "是否推荐 /subject/1/isRecommend",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{mock}}/subject/1/isRecommend",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"subject",
+										"1",
+										"isRecommend"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\":0\n}"
+						}
+					]
+				},
+				{
+					"name": " 添加 /subject",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"名称\",\n\t\"categoryId\": 1,\n\t\"teacherId\":1,\n\t\"cover\":\"http\",\n\t\"intro\":\"简介\",\n\t\"isFree\": 0,\n\t\"price\": 12,\n\t\"originalPrice\": 13.21,\n\t\"detail\":\" 详情\",\n\t\"media\":[\n\t\t{\n\t\t\t\"id\":1,\n\t\t\t\"name\":\"标题\",\n\t\t\t\"video\": {\n\t\t\t\t\"duration\":12,\n\t\t\t\t\"url\":\"视频地址\"\n\t\t\t}\n\t\t}\n\t],\n\t\"isOnSale\":1\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/subject",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"subject"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": " 添加 /subject",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"名称\",\n\t\"categoryId\": 1,\n\t\"teacherId\":1,\n\t\"cover\":\"http\",\n\t\"intro\":\"简介\",\n\t\"isFree\": 0,\n\t\"price\": 12,\n\t\"originalPrice\": 13.21,\n\t\"detail\":\" 详情\",\n\t\"media\":[\n\t\t{\n\t\t\t\"id\":1,\n\t\t\t\"name\":\"标题\",\n\t\t\t\"duration\":12,\n\t\t\t\"url\":\"视频地址\"\n\t\t}\n\t],\n\t\"isOnSale\":1\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/subject",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"subject"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\n\t\"status\":0\n}"
+						}
+					]
+				},
+				{
+					"name": "修改 /subject/1",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"名称\",\n\t\"categoryId\": 1,\n\t\"teacherId\":1,\n\t\"cover\":\"http\",\n\t\"intro\":\"简介\",\n\t\"isFree\": 0,\n\t\"price\": 12,\n\t\"originalPrice\": 13.21,\n\t\"detail\":\" 详情\",\n\t\"media\":[\n\t\t{\n\t\t\t\"id\":1,\n\t\t\t\"name\":\"标题\",\n\t\t\t\"duration\":12,\n\t\t\t\"url\":\"视频地址\"\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/subject/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"subject",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "修改 /subject/1",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"名称\",\n\t\"categoryId\": 1,\n\t\"teacherId\":1,\n\t\"cover\":\"http\",\n\t\"intro\":\"简介\",\n\t\"isFree\": 0,\n\t\"price\": 12,\n\t\"originalPrice\": 13.21,\n\t\"detail\":\" 详情\",\n\t\"media\":[\n\t\t{\n\t\t\t\"id\":1,\n\t\t\t\"name\":\"标题\",\n\t\t\t\"duration\":12,\n\t\t\t\"url\":\"视频地址\"\n\t\t}\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/subject/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"subject",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\":0\n}"
+						}
+					]
+				},
+				{
+					"name": "详情 /subject/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{mock}}/subject/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"subject",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "详情 /subject/1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{mock}}/subject/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"subject",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\":0,\n\t\"data\": {\n\t\t\"name\": \"名称\",\n\t\t\"category\": {\n\t\t\t\"id\":1,\n\t\t\t\"name\":\"分类名称\"\n\t\t},\n\t\t\"teacher\":{\n\t\t\t\"id\":1,\n\t\t\t\"realname\":\"姓名\"\n\t\t},\n\t\t\"cover\":\"http://k.zol-img.com.cn/sjbbs/7692/a7691515_s.jpg\",\n\t\t\"intro\":\"简介简介简介简介简介简介简介简介简介,简介简介简介简介简介简介简介简介简介简介,,简介简介简介简介简介简介简介简介简介简介。简介简介简介简介简介简介简介简介简介简介，简介简介简介简介简介简介简介简介简介简介\",\n\t\t\"isFree\": 1,\n\t\t\"price\": 12,\n\t\t\"originalPrice\": 13.21,\n\t\t\"detail\":\" 详情\",\n\t\t\"media\":[\n\t\t\t{\n\t\t\t\t\"id\":1,\n\t\t\t\t\"name\":\"标题\",\n\t\t\t\t\"duration\":12,\n\t\t\t\t\"url\":\"视频地址\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"id\":2,\n\t\t\t\t\"name\":\"标题\",\n\t\t\t\t\"duration\":12,\n\t\t\t\t\"url\":\"视频地址\"\n\t\t\t},{\n\t\t\t\t\"id\":3,\n\t\t\t\t\"name\":\"标题2\",\n\t\t\t\t\"duration\":12,\n\t\t\t\t\"url\":\"视频地址\"\n\t\t\t},{\n\t\t\t\t\"id\":4,\n\t\t\t\t\"name\":\"标题3\",\n\t\t\t\t\"duration\":12,\n\t\t\t\t\"url\":\"视频地址\"\n\t\t\t},{\n\t\t\t\t\"id\":5,\n\t\t\t\t\"name\":\"标4题\",\n\t\t\t\t\"duration\":12,\n\t\t\t\t\"url\":\"视频地址\"\n\t\t\t},{\n\t\t\t\t\"id\":7,\n\t\t\t\t\"name\":\"标题5\",\n\t\t\t\t\"duration\":12,\n\t\t\t\t\"url\":\"视频地址\"\n\t\t\t},{\n\t\t\t\t\"id\":6,\n\t\t\t\t\"name\":\"标题6\",\n\t\t\t\t\"duration\":12,\n\t\t\t\t\"url\":\"视频地址\"\n\t\t\t}\n\t\t],\n\t\t\"isOnSale\":1\n\t}\n\t\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "news",
+			"item": [
+				{
+					"name": "\b资讯列表 /news",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"type": "text",
+								"value": "p19008:cms:ajkjinjzkjgkjjag"
+							},
+							{
+								"key": "X-Client-Token",
+								"type": "text",
+								"value": "p19008:cms"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/news?filter=12312&scene=REF_CAROUSEL",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"news"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "12312"
+								},
+								{
+									"key": "scene",
+									"value": "REF_CAROUSEL",
+									"description": "REF_CAROUSEL:轮播图\nREF_DEFAULT:默认"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "资讯列表 /news",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/news?filter=12312&scene=REF_CAROUSEL",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"news"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "12312"
+										},
+										{
+											"key": "scene",
+											"value": "REF_CAROUSEL",
+											"description": "REF_CAROUSEL:轮播图\nREF_DEFAULT:默认"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"data\": [\n\t\t{\n\t\t\t\"id\": 1,\n\t\t\t\"title\": \"资讯1\"\n\t\t},\n\t\t{\n\t\t\t\"id\": 2,\n\t\t\t\"title\": \"资讯2\"\n\t\t}\n\t],\n\t\"data2\": {\n\t\t\"total\": 123,\n\t\t\"list\": [\n\t\t\t{\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"title\": \"标题标题标题标题标题标题标题标题标题标题\",\n\t\t\t\t\"author\": \"作者\",\n\t\t\t\t\"time\": 1333333333333,\n\t\t\t\t\"isOnSale\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"id\": 2,\n\t\t\t\t\"title\": \"标题标题标题标题标题标题标题标题标题标题\",\n\t\t\t\t\"author\": \"作者\",\n\t\t\t\t\"time\": 1333333333333,\n\t\t\t\t\"isOnSale\": 0\n\t\t\t}\n\t\t]\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "上/下架 /news/1/isOnSale",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/news/1/isOnSale",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"news",
+								"1",
+								"isOnSale"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "上/下架 /news/1/isOnSale",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/news/1/isOnSale",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"news",
+										"1",
+										"isOnSale"
+									]
+								}
+							},
+							"code": 2,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "添加资讯 /news",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"\",\n\t\"author\": \"\",\n\t\"content\": \"\",\n\t\"subjectId\": \"12312/空\"\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/news",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"news"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "添加资讯 /news",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"title\": \"\",\n\t\"author\": \"\",\n\t\"content\": \"\",\n\t\"subjectId\": \"12312/空\"\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/news",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"news"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "删除资讯 /news/1",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/news/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"news",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "删除资讯 /news/1",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/news/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"news",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "资讯详情 /news/1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"type": "text",
+								"value": "p19008:cms:ajkjinjzkjgkjjag"
+							},
+							{
+								"key": "X-Client-Token",
+								"type": "text",
+								"value": "p19008:cms"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{mock}}/news/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"news",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "资讯详情 /news/1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"type": "text",
+										"value": "p19008:cms:ajkjinjzkjgkjjag"
+									},
+									{
+										"key": "X-Client-Token",
+										"type": "text",
+										"value": "p19008:cms"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/news/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"news",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"data\": {\n\t\t\"title\": \"标题\",\n\t\t\"author\": \"作者\",\n\t\t\"content\": \"很多内容\",\n\t\t\"subject\": {\n\t\t\t\"id\": 1,\n\t\t\t\"name\": \"课程名1\"\n\t\t}\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "编辑资讯 /news/1",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "session",
+								"value": "p19008:cms:d7f868cec8ec471f9d831c05c2d14fb0",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"\",\n\t\"author\": \"\",\n\t\"content\": \"\",\n\t\"subjectId\": \"12312/空\"\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/news/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"news",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "编辑资讯 /news/1",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "session",
+										"value": "p19008:cms:d7f868cec8ec471f9d831c05c2d14fb0",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"title\": \"\",\n\t\"author\": \"\",\n\t\"content\": \"\",\n\t\"subjectId\": \"12312/空\"\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/news/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"news",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "推送管理",
+			"item": [
+				{
+					"name": "推送列表 /notice",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/notice?state",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"notice"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": null,
+									"description": "1:已推送; 0:未推送; 不传: 全部"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "推送列表 /notice",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/notice?state",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"notice"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": null,
+											"description": "1:已推送; 0:未推送; 不传: 全部"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"data\": {\n\t\t\"total\": 123,\n\t\t\"list\": [\n\t\t\t{\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"title\": \"标题\",\n\t\t\t\t\"intro\": \"简介\",\n\t\t\t\t\"time\": 13333333333333,\n\t\t\t\t\"state\": 1\n\t\t\t},{\n\t\t\t\t\"id\": 2,\n\t\t\t\t\"title\": \"标题\",\n\t\t\t\t\"intro\": \"简介\",\n\t\t\t\t\"time\": 13333333333333,\n\t\t\t\t\"state\": 0\n\t\t\t}\n\t\t]\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "添加推送 /notice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:d7f868cec8ec471f9d831c05c2d14fb0",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"title\": \"标题\",\n\t\"intro\": \"简介\",\n\t\"content\": \"详情\",\n\t\"isNow\": \"1:立即推送, 0:定时传time字段\",\n\t\"time\": 13333333333333\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/notice/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"notice",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "添加推送 /notice",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:d7f868cec8ec471f9d831c05c2d14fb0",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\n\t\"title\": \"标题\",\n\t\"intro\": \"简介\",\n\t\"content\": \"详情\",\n\t\"isNow\": \"1:立即推送, 0:定时传time字段\",\n\t\"time\": 13333333333333\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/notice/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"notice",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "推送详情 /notice/1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:d7f868cec8ec471f9d831c05c2d14fb0",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/notice/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"notice",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "推送详情 /notice/1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:d7f868cec8ec471f9d831c05c2d14fb0",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/notice/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"notice",
+										"1"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"description": "1:立即推送, 0:定时传time字段"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"data\": {\n\t\n\t\t\"title\": \"标题\",\n\t\t\"intro\": \"简介\",\n\t\t\"content\": \"详情\",\n\t\t\"isNow\": 0,\n\t\t\"time\": 13333333333333\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "删除推送 /notice/1",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:d7f868cec8ec471f9d831c05c2d14fb0",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/notice/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"notice",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "删除推送 /notice/1",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:d7f868cec8ec471f9d831c05c2d14fb0",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/notice/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"notice",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "编辑推送 /notice/1",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:d7f868cec8ec471f9d831c05c2d14fb0",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"title\": \"标题\",\n\t\"intro\": \"简介\",\n\t\"content\": \"详情\",\n\t\"isNow\": \"1:立即推送, 0:定时传time字段\",\n\t\"time\": 13333333333333\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/notice/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"notice",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "编辑推送 /notice/1",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:d7f868cec8ec471f9d831c05c2d14fb0",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\n\t\"title\": \"标题\",\n\t\"intro\": \"简介\",\n\t\"content\": \"详情\",\n\t\"isNow\": \"1:立即推送, 0:定时传time字段\",\n\t\"time\": 13333333333333\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/notice/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"notice",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "讲师管理",
+			"item": [
+				{
+					"name": "讲师列表 /teacher",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/teacher",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"teacher"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "讲师列表",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock}}/teacher",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"teacher"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"realname\": \"王欣禹1\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        },\n        {\n            \"id\": 2,\n            \"realname\": \"王欣禹2\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        },\n        {\n            \"id\": 3,\n            \"realname\": \"王欣禹3\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        },\n        {\n            \"id\": 4,\n            \"realname\": \"王欣禹4\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        },\n        {\n            \"id\": 5,\n            \"realname\": \"王欣禹5\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        },\n        {\n            \"id\": 6,\n            \"realname\": \"王欣禹6\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        },\n        {\n            \"id\": 7,\n            \"realname\": \"王欣禹7\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        },\n        {\n            \"id\": 8,\n            \"realname\": \"王欣禹8\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        },\n        {\n            \"id\": 9,\n            \"realname\": \"王欣禹9\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        },\n        {\n            \"id\": 10,\n            \"realname\": \"王欣禹10\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        },\n        {\n            \"id\": 11,\n            \"realname\": \"王欣禹11\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        },\n        {\n            \"id\": 12,\n            \"realname\": \"王欣禹12\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        },\n        {\n            \"id\": 13,\n            \"realname\": \"王欣禹13\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        },\n        {\n            \"id\": 14,\n            \"realname\": \"王欣禹14\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        },\n        {\n            \"id\": 15,\n            \"realname\": \"王欣禹15\",\n            \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n            \"intro\": \"这是一条讲师的简介\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "新建讲师 /teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{mock}}/teacher",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"teacher"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "新建讲师",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"realname\": \"\",\n\t\"intro\": \"\",\n\t\"content\": \"\",\n\t\"avatar\": \"\",\n\t\"cover\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/teacher",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"teacher"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"ok\",\n\t\"data\": {\n\t\t\"realname\": \"\",\n\t\t\"intro\": \"\",\n\t\t\"content\": \"\",\n\t\t\"avatar\": \"\",\n\t\t\"cover\": \"\"\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "讲师详情 /teacher/1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/teacher/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"teacher",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "讲师详情 /teacher/1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock}}/teacher/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"teacher",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"realname\": \"王新宇\",\n        \"intro\": \"这是一条讲师姓名\",\n        \"content\": \"这是一条讲师介绍\",\n        \"avatar\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\",\n        \"cover\": \"https://t1.hddhhn.com/uploads/tu/201709/274/b5adf42315.jpg\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "修改\b讲师 /teacher/1",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"realname\":\"讲师姓名\",\n\t\"avatar\":\"头像\",\n\t\"intro\":\"简介\",\n\t\"content\":\"讲师介绍\",\n\t\"cover\":\"封面图片\"\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/teacher/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"teacher",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "修改\b讲师",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"realname\":\"讲师姓名\",\n\t\"avatar\":\"头像\",\n\t\"intro\":\"简介\",\n\t\"content\":\"讲师介绍\",\n\t\"cover\":\"封面图片\"\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/teacher/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"teacher",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\":0,\n\t\"data\":{\n\t\t\"id\":1,\n\t\t\"realName\":\"\"\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "删除讲师 /teacher/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{mock}}/teacher/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"teacher",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "删除讲师 /teacher/1",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{mock}}/teacher/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"teacher",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"ok\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "客服管理",
+			"item": [
+				{
+					"name": "客服列表 /customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{mock}}/customer",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "客服列表 /customer",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock}}/customer",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"customer"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"data\": [\n\t\t{\n\t\t\t\"id\": 1,\n\t\t\t\"name\": \"客服1\",\n\t\t\t\"wechatId\": \"111111111\"\n\t\t},\n\t\t{\n\t\t\t\"id\": 2,\n\t\t\t\"name\": \"客服2\",\n\t\t\t\"wechatId\": \"222222222\"\n\t\t},\n\t\t{\n\t\t\t\"id\": 3,\n\t\t\t\"name\": \"客服3\",\n\t\t\t\"wechatId\": \"3333333333\"\n\t\t},\n\t\t{\n\t\t\t\"id\": 4,\n\t\t\t\"name\": \"客服4\",\n\t\t\t\"wechatId\": \"4444444444\"\n\t\t},\n\t\t{\n\t\t\t\"id\": 5,\n\t\t\t\"name\": \"客服5\",\n\t\t\t\"wechatId\": \"5555555555\"\n\t\t},\n\n\t\t{\n\t\t\t\"id\": 9,\n\t\t\t\"name\": \"客服8\",\n\t\t\t\"wechatId\": \"88888888888\"\n\t\t},\n\t\t{\n\t\t\t\"id\": 10,\n\t\t\t\"name\": \"客服8\",\n\t\t\t\"wechatId\": \"88888888888\"\n\t\t},\n\t\t\t{\n\t\t\t\"id\": 110,\n\t\t\t\"name\": \"客服8\",\n\t\t\t\"wechatId\": \"88888888888\"\n\t\t}\n\t\t]\n}"
+						}
+					]
+				},
+				{
+					"name": "添加客服 /customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"\",\n\t\"wechatId\": \"\"\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/customer",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "添加客服 /customer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"\",\n\t\"wechatId\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/customer",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"customer"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "修改客服 /customer/\b1",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"\",\n\t\"wechatId\":\"微信号\"\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/customer/\b1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"customer",
+								"\b1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "修改客服 /customer/\b1",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\":\"\",\n\t\"wechatId\":\"微信号\"\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/customer/\b1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"customer",
+										"\b1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "删除客服微信 /customer/1",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/customer/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "删除客服微信 /customer/1",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock}}/customer/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"customer",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"ok\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "留言管理",
+			"item": [
+				{
+					"name": "留言列表 /message",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/message?_page=1&_count=10",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"message"
+							],
+							"query": [
+								{
+									"key": "_page",
+									"value": "1"
+								},
+								{
+									"key": "_count",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "留言管理 /message",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock}}/message?_page=1&_count=10",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"message"
+									],
+									"query": [
+										{
+											"key": "_page",
+											"value": "1"
+										},
+										{
+											"key": "_count",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"total\": 40,\n        \"list\": [\n            {\n            \t\"id\": 1,\n                \"nickname\": \"王欣禹1\",\n                \"phone\": \"13339343733\",\n                \"content\": \"这是一条非常重要的留言1\",\n                \"time\": 23456543456\n            },\n            {\n            \t\"id\": 2,\n                \"nickname\": \"王欣禹2\",\n                \"phone\": \"13339343733\",\n                \"content\": \"这是一条非常重要的留言1\",\n                \"time\": 23456543456\n            },\n            {\n            \t\"id\": 3,\n                \"nickname\": \"王欣禹3\",\n                \"phone\": \"13339343733\",\n                \"content\": \"这是一条非常重要的留言1\",\n                \"time\": 23456543456\n            },\n            {\n            \t\"id\": 4,\n                \"nickname\": \"王欣禹4\",\n                \"phone\": \"13339343733\",\n                \"content\": \"这是一条非常重要的留言1\",\n                \"time\": 23456543456\n            },\n            {\n            \t\"id\": 5,\n                \"nickname\": \"王欣禹5\",\n                \"phone\": \"13339343733\",\n                \"content\": \"这是一条非常重要的留言1\",\n                \"time\": 23456543456\n            },\n            {\n            \t\"id\": 6,\n                \"nickname\": \"王欣禹1\",\n                \"phone\": \"13339343733\",\n                \"content\": \"这是一条非常重要的留言1\",\n                \"time\": 23456543456\n            },\n            {\n            \t\"id\": 7,\n                \"nickname\": \"王欣禹2\",\n                \"phone\": \"13339343733\",\n                \"content\": \"这是一条非常重要的留言1\",\n                \"time\": 23456543456\n            },\n            {\n            \t\"id\": 8,\n                \"nickname\": \"王欣禹3\",\n                \"phone\": \"13339343733\",\n                \"content\": \"这是一条非常重要的留言1\",\n                \"time\": 23456543456\n            },\n            {\n            \t\"id\": 9,\n                \"nickname\": \"王欣禹4\",\n                \"phone\": \"13339343733\",\n                \"content\": \"这是一条非常重要的留言1\",\n                \"time\": 23456543456\n            },\n            {\n            \t\"id\": 10,\n                \"nickname\": \"王欣禹5\",\n                \"phone\": \"13339343733\",\n                \"content\": \"这是一条非常重要的留言1\",\n                \"time\": 23456543456\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "积分管理",
+			"item": [
+				{
+					"name": "积分列表 /integralSubject",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/integralSubject?_page=1&_count=10",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"integralSubject"
+							],
+							"query": [
+								{
+									"key": "_page",
+									"value": "1"
+								},
+								{
+									"key": "_count",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "积分列表 /integralSubject",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock}}/integralSubject?_page=1&_count=10",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"integralSubject"
+									],
+									"query": [
+										{
+											"key": "_page",
+											"value": "1"
+										},
+										{
+											"key": "_count",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"total\": 40,\n        \"list\": [\n        \t{\n        \t\t\"id\": 1,\n        \t\t\"subject\": {\n        \t\t\t\"id\": 1,\n        \t\t\t\"name\": \"课程名称1\"\n        \t\t},\n        \t\t\"integral\": 200,\n        \t\t\"count\": 100,\n        \t\t\"isOnSale\": 0\n        \t},\n        \t{\n        \t\t\"id\": 2,\n        \t\t\"subject\": {\n        \t\t\t\"id\": 2,\n        \t\t\t\"name\": \"课程名称2\"\n        \t\t},\n        \t\t\"integral\": 200,\n        \t\t\"count\": 100,\n        \t\t\"isOnSale\": 1\n        \t},\n        \t{\n        \t\t\"id\": 3,\n        \t\t\"subject\": {\n        \t\t\t\"id\": 2,\n        \t\t\t\"name\": \"课程名称2\"\n        \t\t},\n        \t\t\"integral\": 200,\n        \t\t\"count\": 100,\n        \t\t\"isOnSale\": 1\n        \t},\n        \t{\n        \t\t\"id\": 4,\n        \t\t\"subject\": {\n        \t\t\t\"id\": 2,\n        \t\t\t\"name\": \"课程名称2\"\n        \t\t},\n        \t\t\"integral\": 200,\n        \t\t\"count\": 100,\n        \t\t\"isOnSale\": 0\n        \t},\n        \t{\n        \t\t\"id\": 5,\n        \t\t\"subject\": {\n        \t\t\t\"id\": 2,\n        \t\t\t\"name\": \"课程名称5\"\n        \t\t},\n        \t\t\"integral\": 200,\n        \t\t\"count\": 100,\n        \t\t\"isOnSale\": 1\n        \t},\n        \t{\n        \t\t\"id\": 6,\n        \t\t\"subject\": {\n        \t\t\t\"id\": 1,\n        \t\t\t\"name\": \"课程名称1\"\n        \t\t},\n        \t\t\"integral\": 200,\n        \t\t\"count\": 100,\n        \t\t\"isOnSale\": 0\n        \t},\n        \t{\n        \t\t\"id\": 7,\n        \t\t\"subject\": {\n        \t\t\t\"id\": 2,\n        \t\t\t\"name\": \"课程名称2\"\n        \t\t},\n        \t\t\"integral\": 200,\n        \t\t\"count\": 100,\n        \t\t\"isOnSale\": 1\n        \t},\n        \t{\n        \t\t\"id\": 8,\n        \t\t\"subject\": {\n        \t\t\t\"id\": 2,\n        \t\t\t\"name\": \"课程名称2\"\n        \t\t},\n        \t\t\"integral\": 200,\n        \t\t\"count\": 100,\n        \t\t\"isOnSale\": 1\n        \t},\n        \t{\n        \t\t\"id\": 9,\n        \t\t\"subject\": {\n        \t\t\t\"id\": 2,\n        \t\t\t\"name\": \"课程名称2\"\n        \t\t},\n        \t\t\"integral\": 200,\n        \t\t\"count\": 100,\n        \t\t\"isOnSale\": 0\n        \t},\n        \t{\n        \t\t\"id\": 10,\n        \t\t\"subject\": {\n        \t\t\t\"id\": 2,\n        \t\t\t\"name\": \"课程名称5\"\n        \t\t},\n        \t\t\"integral\": 200,\n        \t\t\"count\": 100,\n        \t\t\"isOnSale\": 1\n        \t}\n        \t]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "下架/上架 /integralSubject/1/isOnSale",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{mock}}/integralSubject/1/isOnSale",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"integralSubject",
+								"1",
+								"isOnSale"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "下架/上架",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{mock}}/integralSubject/1/isOnSale",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"integralSubject",
+										"1",
+										"isOnSale"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "课程列表 /subject",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{mock}}/subject?\bscene=REF_INTEGRAL&filter=abc",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"subject"
+							],
+							"query": [
+								{
+									"key": "\bscene",
+									"value": "REF_INTEGRAL",
+									"description": "正常列表为空或等于DEFAULT(有关联查询已上架)"
+								},
+								{
+									"key": "filter",
+									"value": "abc",
+									"description": "模糊查询课程名"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "课程列表",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock}}/subject?scene=REF_INTEGRAL&filter=abc",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"subject"
+									],
+									"query": [
+										{
+											"key": "scene",
+											"value": "REF_INTEGRAL"
+										},
+										{
+											"key": "filter",
+											"value": "abc"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"aaa\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"bbb\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"ccc\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"ddd\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"eee\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"fff\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "新增积分课程 /integralSubject",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"subjectId\": 1,\n\t\"integral\": 100\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/integralSubject",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"integralSubject"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "新增积分课程",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"subjectId\": 1,\n\t\"integral\": 100\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/integralSubject",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"integralSubject"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "修改积分课程 /integralSubject/1",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"subjectId\": 1,\n\t\"integral\": 100\n}"
+						},
+						"url": {
+							"raw": "{{mock}}/integralSubject/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"integralSubject",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "新增积分课程",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"subjectId\": 1,\n\t\"integral\": 100\n}"
+								},
+								"url": {
+									"raw": "{{mock}}/integralSubject/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"integralSubject",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "删除积分课程 /integralSubject/1",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/integralSubject/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"integralSubject",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "删除积分课程 /integralSubject/1",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock}}/integralSubject/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"integralSubject",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"notice\": \"ok\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "订单管理",
+			"item": [
+				{
+					"name": "订单列表 /order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/order?_page=1&_count=10&filter=abc&state=PAYMENT || PAYMENTED",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"order"
+							],
+							"query": [
+								{
+									"key": "_page",
+									"value": "1"
+								},
+								{
+									"key": "_count",
+									"value": "10"
+								},
+								{
+									"key": "filter",
+									"value": "abc"
+								},
+								{
+									"key": "state",
+									"value": "PAYMENT || PAYMENTED"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "订单列表 /order",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"type": "text",
+										"value": "p19008:cms:ajkjinjzkjgkjjag"
+									},
+									{
+										"key": "X-Client-Token",
+										"type": "text",
+										"value": "p19008:cms"
+									}
+								],
+								"url": {
+									"raw": "{{mock}}/order?_page=1&_count=10&filter=abc&state=PAYMENT || PAYMENTED",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"order"
+									],
+									"query": [
+										{
+											"key": "_page",
+											"value": "1"
+										},
+										{
+											"key": "_count",
+											"value": "10"
+										},
+										{
+											"key": "filter",
+											"value": "abc"
+										},
+										{
+											"key": "state",
+											"value": "PAYMENT || PAYMENTED"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"status\": 0,\n\t\"data\": {\n\t\t\"total\": 40,\n\t\t\"list\": [\n\t\t\t{\n\t\t\t\t\"id\": 11111111,\n\t\t\t\t\"goodsName\": \"课程名称\",\n\t\t\t\t\"goodsPrice\": 500,\n\t\t\t\t\"payPrice\": 100,\n\t\t\t\t\"payType\": \"ALI\",\n\t\t\t\t\"time\": 1343334344333,\n\t\t\t\t\"state\": \"PAYMENT\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"id\": 22222222,\n\t\t\t\t\"goodsName\": \"课程名称\",\n\t\t\t\t\"goodsPrice\": 500,\n\t\t\t\t\"payPrice\": 100,\n\t\t\t\t\"payType\": \"WECHAT\",\n\t\t\t\t\"time\": 1343334344333,\n\t\t\t\t\"state\": \"PAYMENTED\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"id\": 33333333,\n\t\t\t\t\"goodsName\": \"课程名称\",\n\t\t\t\t\"goodsPrice\": 500,\n\t\t\t\t\"payPrice\": 100,\n\t\t\t\t\"payType\": \"ALI\",\n\t\t\t\t\"time\": 1343334344333,\n\t\t\t\t\"state\": \"PAYMENT\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"id\": 44444444,\n\t\t\t\t\"goodsName\": \"课程名称\",\n\t\t\t\t\"goodsPrice\": 500,\n\t\t\t\t\"payPrice\": 100,\n\t\t\t\t\"payType\": \"WECHAT\",\n\t\t\t\t\"time\": 1343334344333,\n\t\t\t\t\"state\": \"PAYMENTED\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"id\": 555555555,\n\t\t\t\t\"goodsName\": \"课程名称\",\n\t\t\t\t\"goodsPrice\": 500,\n\t\t\t\t\"payPrice\": 100,\n\t\t\t\t\"payType\": \"WECHAT\",\n\t\t\t\t\"time\": 1343334344333,\n\t\t\t\t\"state\": \"PAYMENTED\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"id\": 6666666666,\n\t\t\t\t\"goodsName\": \"课程名称\",\n\t\t\t\t\"goodsPrice\": 500,\n\t\t\t\t\"payPrice\": 100,\n\t\t\t\t\"payType\": \"ALI\",\n\t\t\t\t\"time\": 1343334344333,\n\t\t\t\t\"state\": \"PAYMENT\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"id\": 777777777,\n\t\t\t\t\"goodsName\": \"课程名称\",\n\t\t\t\t\"goodsPrice\": 500,\n\t\t\t\t\"payPrice\": 100,\n\t\t\t\t\"payType\": \"WECHAT\",\n\t\t\t\t\"time\": 1343334344333,\n\t\t\t\t\"state\": \"PAYMENTED\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"id\": 888888888,\n\t\t\t\t\"goodsName\": \"课程名称\",\n\t\t\t\t\"goodsPrice\": 500,\n\t\t\t\t\"payPrice\": 100,\n\t\t\t\t\"payType\": \"ALI\",\n\t\t\t\t\"time\": 1343334344333,\n\t\t\t\t\"state\": \"PAYMENT\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"id\": 999999999,\n\t\t\t\t\"goodsName\": \"课程名称\",\n\t\t\t\t\"goodsPrice\": 500,\n\t\t\t\t\"payPrice\": 100,\n\t\t\t\t\"payType\": \"WECHAT\",\n\t\t\t\t\"time\": 1343334344333,\n\t\t\t\t\"state\": \"PAYMENTED\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"id\": 10101010101100110,\n\t\t\t\t\"goodsName\": \"课程名称\",\n\t\t\t\t\"goodsPrice\": 500,\n\t\t\t\t\"payPrice\": 100,\n\t\t\t\t\"payType\": \"WECHAT\",\n\t\t\t\t\"time\": 1343334344333,\n\t\t\t\t\"state\": \"PAYMENTED\"\n\t\t\t}\n\t\t\t]\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "订单详情 /order/1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session",
+								"value": "p19008:cms:ajkjinjzkjgkjjag",
+								"type": "text"
+							},
+							{
+								"key": "X-Client-Token",
+								"value": "p19008:cms",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mock}}/order/1",
+							"host": [
+								"{{mock}}"
+							],
+							"path": [
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "订单详情 /order/1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session",
+										"value": "p19008:cms:ajkjinjzkjgkjjag",
+										"type": "text"
+									},
+									{
+										"key": "X-Client-Token",
+										"value": "p19008:cms",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{mock}}/order/1",
+									"host": [
+										"{{mock}}"
+									],
+									"path": [
+										"order",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"id\": 1113322221,\n        \"state\": \"PAYMENT\",\n        \"phone\": 13333333333,\n        \"nickname\": \"王欣禹\",\n        \"time\": 1432343234321,\n        \"goodsName\": \"课程名称111\",\n        \"goodsPrice\": 100,\n        \"payPrice\": 100,\n        \"payType\": \"ALI\",\n        \"payTime\": 1132343234321,\n        \"content\": \"这是一条优惠信息\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+})

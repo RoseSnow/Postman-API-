@@ -1,0 +1,225 @@
+html, body {
+    height: 100%;
+    color: #7e7e7e;
+    font-size: 12px;
+}
+
+// common Section
+.link {
+    color: #7e7e7e;
+    padding: 5px 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: #f26b3a;
+}
+
+.none {
+    display: none;
+}
+
+.tpl {
+    .none;
+}
+
+.name-tpl {
+    .none;
+}
+
+.content-tpl {
+    .none;
+}
+
+.beak-all {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+// method color Section
+.method {
+    &-get {
+        color: #3eb63e;
+    }
+    &-post {
+        color: #f5a623;
+    }
+    &-patch {
+        color: #666;
+    }
+    &-put {
+        color: #2197d8;
+    }
+    &-delete {
+        color: #ea4d4d;
+    }
+}
+
+// status color Section
+.status {
+    &-success {
+        color: #3eb63e;
+    }
+    &-fail {
+        color: #ea4d4d;
+    }
+}
+
+.value-wrapper-common {
+    background-color: #fafafa;
+    border: 1px solid #eee;
+    padding: 8px;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 3px;
+}
+
+// root Section
+#root {
+    height: 100%;
+
+    .goBackTop {
+        position: fixed;
+        top: 50%;
+        right: 5px;
+        background: #d4d4d4;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        margin-top: -25px;
+        text-align: center;
+        color: #fff;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    .wrapper {
+        // 菜单栏 Section
+        height: 100%;
+
+        .title {
+            padding: 10px 0 0 36px;
+            cursor: pointer;
+        }
+
+        .left-menu {
+            overflow-y: scroll;
+            height: calc(100%);
+            background-color: #f4f4f4;
+
+            .api {
+                padding: 10px 0 10px 36px;
+                cursor: pointer;
+                white-space: nowrap;
+                color: #7e7e7e;
+                .method {
+                    padding-right: 10px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .nav-tree-child-tree {
+                    padding-left: 36px;
+                }
+                .url {
+                    max-width: 12rem;
+                    display: inline-block;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                }
+                &:hover {
+                    color: #f26b3a;
+                }
+            }
+
+            .nav-tree {
+                &-child-tree {
+                    padding-left: 18px;
+                }
+
+                .nav-item {
+                }
+            }
+        }
+
+        // 内容显示 Section
+        .right-content {
+            overflow-y: scroll;
+            height: calc(100%);
+            color: #333;
+
+            .content-wrapper {
+                border-bottom: 1px solid #eee;
+                padding: 24px;
+                margin: 0;
+
+                .title-wrapper {
+                    margin-bottom: 16px;
+                }
+
+                .url {
+                    .beak-all;
+                    background: #f4f4f4;
+                    padding: 4px 8px;
+                    border: 1px solid #d4d4d4;
+                    font-size: 14px;
+                    border-radius: 3px;
+                    line-height: 24px;
+                }
+
+                .api-body {
+                    .header, .params{
+                        h4 {
+                            margin: 21px 0 7px;
+                        }
+
+                        .value-wrapper {
+                            .value-wrapper-common;
+                            .key {
+                                font-weight: 800;
+                            }
+                            .value {
+                                .beak-all;
+                            }
+                        }
+                    }
+                    .body {
+                        h4 {
+                            margin: 21px 0 7px;
+                        }
+                        .value-wrapper {
+                            .value-wrapper-common;
+                            .beak-all;
+                            white-space: pre-wrap
+                        }
+                    }
+                    .resp {
+                        h4 {
+                            margin: 21px 0 7px;
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                        .value-wrapper {
+                            position: relative;
+                            .value-wrapper-common;
+                            .beak-all;
+                            white-space: pre-wrap;
+                            background: #282828;
+                            color: #e6db74;
+
+                            .copy {
+                                position: absolute;
+                                top: 10px;
+                                right: 10px;
+                                color: #7e7e7e;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            };
+        }
+    }
+}

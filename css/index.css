@@ -1,0 +1,202 @@
+html,
+body {
+  height: 100%;
+  color: #7e7e7e;
+  font-size: 12px;
+}
+.link {
+  color: #7e7e7e;
+  padding: 5px 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.link:hover {
+  color: #f26b3a;
+}
+.none {
+  display: none;
+}
+.tpl {
+  display: none;
+}
+.name-tpl {
+  display: none;
+}
+.content-tpl {
+  display: none;
+}
+.beak-all {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.method-get {
+  color: #3eb63e;
+}
+.method-post {
+  color: #f5a623;
+}
+.method-patch {
+  color: #666;
+}
+.method-put {
+  color: #2197d8;
+}
+.method-delete {
+  color: #ea4d4d;
+}
+.status-success {
+  color: #3eb63e;
+}
+.status-fail {
+  color: #ea4d4d;
+}
+.value-wrapper-common {
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 3px;
+}
+#root {
+  height: 100%;
+}
+#root .goBackTop {
+  position: fixed;
+  top: 50%;
+  right: 5px;
+  background: #d4d4d4;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: -25px;
+  text-align: center;
+  color: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+}
+#root .wrapper {
+  height: 100%;
+}
+#root .wrapper .title {
+  padding: 10px 0 0 36px;
+  cursor: pointer;
+}
+#root .wrapper .left-menu {
+  overflow-y: scroll;
+  height: calc(100%);
+  background-color: #f4f4f4;
+}
+#root .wrapper .left-menu .api {
+  padding: 10px 0 10px 36px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #7e7e7e;
+}
+#root .wrapper .left-menu .api .method {
+  padding-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#root .wrapper .left-menu .api .nav-tree-child-tree {
+  padding-left: 36px;
+}
+#root .wrapper .left-menu .api .url {
+  max-width: 12rem;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+#root .wrapper .left-menu .api:hover {
+  color: #f26b3a;
+}
+#root .wrapper .left-menu .nav-tree-child-tree {
+  padding-left: 18px;
+}
+#root .wrapper .right-content {
+  overflow-y: scroll;
+  height: calc(100%);
+  color: #333;
+}
+#root .wrapper .right-content .content-wrapper {
+  border-bottom: 1px solid #eee;
+  padding: 24px;
+  margin: 0;
+}
+#root .wrapper .right-content .content-wrapper .title-wrapper {
+  margin-bottom: 16px;
+}
+#root .wrapper .right-content .content-wrapper .url {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  background: #f4f4f4;
+  padding: 4px 8px;
+  border: 1px solid #d4d4d4;
+  font-size: 14px;
+  border-radius: 3px;
+  line-height: 24px;
+}
+#root .wrapper .right-content .content-wrapper .api-body .header h4,
+#root .wrapper .right-content .content-wrapper .api-body .params h4 {
+  margin: 21px 0 7px;
+}
+#root .wrapper .right-content .content-wrapper .api-body .header .value-wrapper,
+#root .wrapper .right-content .content-wrapper .api-body .params .value-wrapper {
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 3px;
+}
+#root .wrapper .right-content .content-wrapper .api-body .header .value-wrapper .key,
+#root .wrapper .right-content .content-wrapper .api-body .params .value-wrapper .key {
+  font-weight: 800;
+}
+#root .wrapper .right-content .content-wrapper .api-body .header .value-wrapper .value,
+#root .wrapper .right-content .content-wrapper .api-body .params .value-wrapper .value {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+#root .wrapper .right-content .content-wrapper .api-body .body h4 {
+  margin: 21px 0 7px;
+}
+#root .wrapper .right-content .content-wrapper .api-body .body .value-wrapper {
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 3px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+#root .wrapper .right-content .content-wrapper .api-body .resp h4 {
+  margin: 21px 0 7px;
+  display: flex;
+  justify-content: space-between;
+}
+#root .wrapper .right-content .content-wrapper .api-body .resp .value-wrapper {
+  position: relative;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 3px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+  background: #282828;
+  color: #e6db74;
+}
+#root .wrapper .right-content .content-wrapper .api-body .resp .value-wrapper .copy {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #7e7e7e;
+  cursor: pointer;
+}
